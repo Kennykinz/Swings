@@ -3,33 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brickhouse Coffee Co.</title>
+  <title>M.E. Swing Company</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="announcement">
     FREE SHIPPING ON ORDERS OVER $60.
   </div>
-  <header>
 
-    <img src="img/logo_swings.png" alt="M.E. Swing Company" class="logo">
-    <h1>Where History Brews Into Every Cup</h1>
-    <p>EST 1916</p>
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <img src="img/logo_swings.png" alt="Swings Coffee Logo" class="logo">
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#subscriptions">Subscriptions</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#wholesale">Wholesale</a></li>
+        <li><a href="#resume">KENNEDY'S RESUME</a></li>
+        <li><a href="#learn">Learn More</a></li>
+      </ul>
+    </nav>
   </header>
+
   <div class="hero">
     <h2>Burundi Hafi Natural</h2>
     <button>Buy Now</button>
   </div>
-  <img src="img/giftcards.jpg" alt="Gift Cards" class="feature-image">
-  <div class="feature-section">
-    <h3>Gift Cards</h3>
+
+  <div class="feature-row">
+    <a href="/gift-cards" class="feature-link">
+      <img src="img/giftcards.jpg" alt="Gift Cards" class="feature-image">
+      <div class="feature-overlay">Buy Gift Cards</div>
+    </a>
+    <a href="/order-to-go" class="feature-link">
+      <img src="img/delray_storefront.jpg" alt="Order to Go" class="feature-image">
+      <div class="feature-overlay">Order to Go From Our Cafes</div>
+    </a>
   </div>
-  <img src="img/delray_storefront.jpg" alt="Order to Go" class="feature-image">
-  <div class="feature-section">
-    <h3>Order to Go From Our Cafes</h3>
-  </div>
+
   <footer>
     &copy; © 2025 M.E. Swing Company • All Rights Reserved • Proud members of the SCA
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobile-nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
